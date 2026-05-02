@@ -13,6 +13,8 @@
 
 **Submission Date:** May 2026 — Semester 6
 
+**Repository:** [https://github.com/ZekeriyaDulli/ISU-AI-Chatbot](https://github.com/ZekeriyaDulli/ISU-AI-Chatbot)
+
 ---
 
 ### Team Members and Responsibilities
