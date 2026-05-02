@@ -62,8 +62,6 @@ Agentic_LLM_Creation_and_Monitoring/
 │   └── app.py                 # Streamlit front-end (Azaa)
 ├── docs/
 │   ├── FINAL_REPORT_DRAFT.md  # Full project report
-│   ├── demo_runbook.md        # 10-min demo script
-│   └── video_scripts.md       # Per-member video scripts
 ├── .streamlit/
 │   └── config.toml            # fileWatcherType=poll (suppresses torchvision warnings)
 ├── chroma_db/                 # Persisted vector store (auto-created on ingest)
@@ -260,9 +258,3 @@ User Query
 ```
 
 ---
-
-## Demo Runbook
-
-See `docs/demo_runbook.md` for the full 10-minute demo script with exact queries, timing, and contingency plans.
-
-> Presenter: **Obada Abdulhakim Kharaz** (STU: 2309115277)
