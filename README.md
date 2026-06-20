@@ -27,6 +27,18 @@ This system acts as a **24/7 AI chatbot** grounded in a real ISU knowledge base 
 
 ---
 
+## Screenshots
+
+**A grounded response with safety badge "Passed":**
+
+![Researcher response with safety badge passed](docs/screenshots/chat_response_tuition_fees.png)
+
+**Team roster, rendered live in the sidebar:**
+
+![Team roster sidebar](docs/screenshots/team_roster_sidebar.png)
+
+---
+
 ## Tech Stack
 
 | Layer | Technology | Notes |

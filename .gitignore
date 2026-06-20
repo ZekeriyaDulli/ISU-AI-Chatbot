@@ -14,7 +14,6 @@ eval/tests/__init__.py
 eval\tests\__pycache__
 
 docs/video_scripts.md
-docs/demo_runbook.md
 
 rag/__pycache__
 rag/__init__.py

@@ -110,6 +110,24 @@ This project was designed around five measurable objectives:
 
 **Data constraints:** The knowledge base contains 22 official ISU documents (36 chunks) compiled from public ISU web sources. The ingestion script (`rag/ingest_isu.py`) is idempotent — it can be re-run to clear and rebuild the database from scratch. Additional documents can be ingested live through the Streamlit sidebar.
 
+### 1.5 Project Timeline & Deliverables
+
+The project was executed over a 7-day cycle. Each of the seven team members worked in parallel on their own deliverable for five days, followed by one shared revision day and one upload day — coordinated and tracked by the Project Manager & Demo Lead.
+
+| Day | Date | Phase | Owner(s) | Deliverable |
+|---|---|---|---|---|
+| 1–5 | Apr 26 – Apr 30 | Individual development | Zekeriya Dulli | `agents/orchestrator.py`, app structure, startup/seed system |
+| 1–5 | Apr 26 – Apr 30 | Individual development | Obada Abdulhakim Kharaz | Timeline coordination, deliverable tracking, demo planning |
+| 1–5 | Apr 26 – Apr 30 | Individual development | Hamdi ALNAQEEB | `agents/prompt_engineer.py`, prompt registry, agent personas |
+| 1–5 | Apr 26 – Apr 30 | Individual development | Fares STOUHI | `rag/vector_db.py`, `rag/ingest_isu.py`, ISU knowledge base curation |
+| 1–5 | Apr 26 – Apr 30 | Individual development | Azaa Almousli | `ui/app.py`, Streamlit front-end, UX design |
+| 1–5 | Apr 26 – Apr 30 | Individual development | Abdulaziz ALYAHYA | `agents/safety_monitor.py`, 3-layer guardrails, risk scoring |
+| 1–5 | Apr 26 – Apr 30 | Individual development | Leen Safi | `eval/pipeline.py`, unit tests, evaluation methodology |
+| 6 | May 1 | Integration & revision | Full team | Merged all components, end-to-end test pass, fixed integration bugs, finalized report sections |
+| 7 | May 2 | Upload & submission | Obada Abdulhakim Kharaz | Final repository push to GitHub, deliverables checklist confirmed complete |
+
+**Coordination notes:** Daily progress was tracked against each person's deliverable above so blockers (e.g., the agent layer waiting on the RAG pipeline's retrieval interface) surfaced before the integration day rather than during it. The May 1 revision day was reserved specifically to catch integration issues between independently developed modules before the May 2 submission.
+
 ---
 
 ## 2. System Architecture
@@ -737,14 +755,15 @@ The Streamlit interface was designed around three UX principles:
 | **DB Metric** | Sidebar | `st.metric` | Real-time document count from ChromaDB |
 | **Team Roster** | Sidebar | `st.markdown` | Attribution for all 7 team members with Student IDs and roles |
 
-### 7.3 Screenshot Placeholders
+### 7.3 Screenshots
 
-_(Insert UI screenshots here before final submission. Suggested screenshots:)_
-1. Home screen with empty knowledge base
-2. After document ingestion — DB metric updated
-3. A Researcher response with safety badge "Passed"
-4. A flagged response with the ⚠️ safety warning and expanded safety detail panel
-5. An Analyst response showing the structured output format
+**A Researcher response with safety badge "Passed":** a real, end-to-end query ("how can I pay my tuition fees?") routed to the Researcher agent, grounded in the ingested ISU knowledge base (36/36 chunks), with the safety badge showing ✅ Passed.
+
+![Researcher response with safety badge passed](screenshots/chat_response_tuition_fees.png)
+
+**Team roster in the sidebar:** all 7 team members with student IDs and roles, rendered live from the `TEAM` list in `ui/app.py`.
+
+![Team roster sidebar](screenshots/team_roster_sidebar.png)
 
 ### 7.4 Usability Considerations
 
